@@ -324,7 +324,7 @@ html {
 
 body {
   height: 100%;
-  font-family: "font-family: " "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 500;
   color: #283618;
 }
@@ -360,7 +360,8 @@ nav ul li {
   flex: 1;
 }
 nav li.active {
-  background-color: #dda15e;
+  background-color: #bc6c25;
+  color: #606c38;
 }
 nav a {
   display: block;
@@ -374,7 +375,7 @@ nav a:hover {
 }
 
 #footerWrapper {
-  background-color: #dda15e;
+  background-color: #bc6c25;
 }
 
 footer {
@@ -384,6 +385,7 @@ footer p {
   margin: 0;
   font-weight: 300;
   text-align: center;
+  color: #fefae0;
 }
 
 @media only screen and (min-width: 35rem) {
