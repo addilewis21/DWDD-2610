@@ -1,0 +1,24 @@
+header {
+  padding: 2rem $gutter;
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+// main stuff
+section {
+  grid-template-columns: 1fr 1fr;
+}
+
+nav {
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-content: flex-start;
+    li {
+      flex: 1;
+    }
+  }
+}

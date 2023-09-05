@@ -17,11 +17,12 @@ body {
   height: 100%;
   font-family: $defaultFont;
   font-weight: $normalWeight;
-  color: #283618;
+  color: $thirdColor;
+  background-color: $fontColor;
 }
 
 #headerWrapper {
-  background-color: #283618;
+  background-color: $thirdColor;
   color: $fontColor; 
 }
 header {
@@ -34,6 +35,14 @@ header {
     font-size: 1.2rem;
     font-weight: $normalWeight;
   }
+}
+
+h3 {
+  font-weight: $boldWeight;
+  font-size: 1.5rem;
+  margin-left: 1.2rem;
+  margin-bottom: 0;
+
 }
 
 #navWrapper {
@@ -61,21 +70,56 @@ nav {
     text-align: center;
     text-decoration: none;
     &:hover {
-      color: #283618;
+      color: #E3E3AC;
     }
   }
 }
+
+
+// main stuff
+section {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+section div {
+  width: 100%;
+  padding: 1rem $gutter;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: .1rem;
+  background-color: $secondaryColor;
+  padding: .5rem;
+  color: $fontColor;
+  border-radius: 15px 15px 0 0;
+}
+
+p {
+  color: $fontColor;
+  background-color: $primaryColor;
+  padding: .6rem;
+  text-align: center;
+  margin: 0;
+  font-weight: $lightWeight;
+}
+
 
 // begin the footer
 #footerWrapper {
   background-color: $secondaryColor;
 }
 footer {
-  padding: .5rem $gutter;
+  padding: 1rem $gutter;
   p {
     margin: 0;
     font-weight: $lightWeight;
     text-align: center;
     color: $fontColor;
+    background-color: $secondaryColor;
   }
 }

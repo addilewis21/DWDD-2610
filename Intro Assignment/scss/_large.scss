@@ -2,3 +2,8 @@ header, nav, main, footer {
   max-width: 60rem;
   margin: auto;
 }
+
+// main stuff
+section {
+  grid-template-columns: 1fr 1fr 1fr;
+}
