@@ -356,30 +356,31 @@ h3 {
 
 #navWrapper {
   background-color: #6A687A;
+  align-items: flext-start;
 }
 
 nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
+  text-decoration: none;
+  display: block;
+  padding: 1rem 2vw;
 }
-nav ul li {
-  flex: 1;
-}
-nav li.active {
+
+li.active {
   background-color: #083529;
   color: #6A687A;
+  width: 100%;
+  border-radius: 8px;
 }
-nav a {
+
+a {
   display: block;
-  padding: 0.75rem;
+  padding: 1rem 2vw;
   color: #ffffed;
-  text-align: center;
   text-decoration: none;
 }
-nav a:hover {
+a:hover {
   color: #E3E3AC;
+  background-color: #000000;
 }
 
 section {
@@ -444,10 +445,20 @@ footer p {
     padding: 0;
     margin: 0;
     display: flex;
-    align-content: flex-start;
   }
   nav ul li {
     flex: 1;
+  }
+  nav li.active {
+    background-color: #083529;
+    color: #6A687A;
+    border-radius: 0;
+  }
+  nav a {
+    color: #ffffed;
+  }
+  nav a:hover {
+    color: #E3E3AC;
   }
 }
 @media only screen and (min-width: 60rem) {

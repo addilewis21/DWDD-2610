@@ -47,33 +47,36 @@ h3 {
 
 #navWrapper {
   background-color: $primaryColor;
+  align-items: flext-start;
 }
 
 nav {
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    li {
-      flex: 1;
-    }
+      ul{
+        text-decoration: none;
+        display: block;
+        padding: 1rem 2vw;
+
+      }
+
   }
   li.active {
     background-color: $secondaryColor;
     color: $primaryColor;
+    width: 100%;
+    border-radius: 8px;
   }
   a {
     display: block;
-    padding: 0.75rem;
+    padding: 1rem 2vw;
     color: $fontColor;
-    text-align: center;
     text-decoration: none;
+
     &:hover {
       color: #E3E3AC;
+      background-color: #000000;
     }
   }
-}
+
 
 
 // main stuff
