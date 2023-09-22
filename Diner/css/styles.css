@@ -436,7 +436,8 @@ div.allcards section a {
 
 footer {
   padding: 1rem 16px;
-  color: white;
+  color: #001B2E;
+  text-decoration: none;
 }
 footer section.contact p {
   font-size: 1.2rem;
@@ -445,6 +446,14 @@ footer section.contact p {
 footer section.contact ion-icon {
   color: #ECF0F1;
   padding-right: 5px;
+  color: #001B2E;
+}
+footer section.contact a {
+  text-decoration: none;
+  color: #001B2E;
+}
+footer section.contact a:hover {
+  color: white;
 }
 footer section.social {
   display: flex;
@@ -455,19 +464,19 @@ footer section.social a {
   font-size: 2rem;
   margin: 0.5rem;
   padding: 0.5rem;
-  color: white;
+  color: #001B2E;
 }
 footer section.social a:hover {
-  background-color: #001B2E;
+  color: white;
 }
 footer section.location {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  margin-top: 0px;
 }
 footer p.legal {
   margin: 0;
-  font-weight: 300;
   text-align: center;
-  color: #ECF0F1;
+  color: #001B2E;
   background-color: #7286A0;
 }
 

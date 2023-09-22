@@ -139,7 +139,8 @@ div.allcards {
 }
 footer {
   padding: 1rem $gutter;
-  color: white;
+  color: #001B2E;
+  text-decoration: none;
 
   section {}
 
@@ -151,6 +152,14 @@ footer {
       ion-icon {
         color: $fontColor;
         padding-right: 5px;
+        color: #001B2E;
+      }
+      a {
+        text-decoration: none;
+        color: #001B2E;
+        &:hover {
+          color: white;
+        }
       }
     }
    //end of contact
@@ -162,22 +171,22 @@ section.social {
       font-size: 2rem;
       margin: .5rem;
       padding: .5rem;
-      color: white;
+      color: #001B2E;
       &:hover {
-        background-color: $thirdColor;
+        color: white;
       }
     }
 
 } //end of social
 section.location {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  margin-top: 0px;
 } // end of location
 
   p.legal {
     margin: 0;
-    font-weight: $lightWeight;
     text-align: center;
-    color: $fontColor;
+    color: #001B2E;
     background-color: $secondaryColor;
   }
 }
