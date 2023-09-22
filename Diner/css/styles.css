@@ -326,12 +326,12 @@ body {
   height: 100%;
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
-  color: #6A687A;
+  color: #001B2E;
   background-color: #ECF0F1;
 }
 
 #headerWrapper {
-  background-color: #6A687A;
+  background-color: #001B2E;
   color: #ECF0F1;
 }
 
@@ -355,7 +355,8 @@ h3 {
 }
 
 #navWrapper {
-  background-color: #253746;
+  background-color: #6A3C25;
+  color: #ECF0F1;
 }
 
 nav button {
@@ -369,7 +370,6 @@ nav ul {
   text-decoration: none;
   display: none;
   padding: 0.5rem 2vw;
-  border-top: solid 1px white;
 }
 nav ul.open {
   display: block;
@@ -377,89 +377,98 @@ nav ul.open {
 nav ul li {
   border-bottom: solid 1px white;
 }
-
-li.active {
-  background-color: #7d9eba;
-  color: #253746;
+nav li.active {
+  background-color: #7286A0;
+  color: #001B2E;
   width: 100%;
 }
-
-a {
+nav a {
   display: block;
   padding: 1rem 2vw;
   color: #ECF0F1;
   text-decoration: none;
 }
-a:hover {
-  background-color: #3f5e78;
-  color: #253746;
+nav a:hover {
+  background-color: #a35c39;
 }
 
-section {
-  display: grid;
-  grid-template-columns: 1fr;
+div.allcards {
+  padding: 0 16px;
 }
-
-section div {
-  width: 100%;
+div.allcards section {
+  border: 0.2rem solid #001B2E;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+div.allcards section h2, div.allcards section p, div.allcards section img {
+  margin: 0;
   padding: 1rem 16px;
 }
-section div img {
+div.allcards section h2 {
+  background-color: #7286A0;
+  font-size: 1.5rem;
+  color: #ECF0F1;
+  text-align: center;
+}
+div.allcards section img {
   width: 100%;
   height: auto;
+  display: block;
 }
-
-h2 {
+div.allcards section p {
+  font-style: italic;
+}
+div.allcards section a {
+  display: block;
+  background-color: #001B2E;
+  padding: 0.75rem;
   text-align: center;
-  margin-bottom: 0px;
-  background-color: #667E93;
-  padding: 0.5rem;
+  margin: 0 3rem 1rem 3rem;
+  border-radius: 8px;
   color: #ECF0F1;
-  border-radius: 15px 15px 0 0;
-}
-
-p {
-  color: #ECF0F1;
-  background-color: #253746;
-  padding: 0.6rem;
-  text-align: center;
-  margin: 0;
-  font-weight: 300;
-}
-
-.hero img {
-  width: 100%;
-  height: auto;
-}
-
-video {
-  width: 90%;
-  margin-left: 5%;
-}
-
-details {
-  margin: 0.5rem 16px;
-  padding: 1rem;
-}
-details summary {
-  background-color: #667E93;
-  color: #ECF0F1;
-  padding: 2rem;
+  text-decoration: none;
 }
 
 #footerWrapper {
-  background-color: #667E93;
+  background-color: #7286A0;
 }
 
 footer {
   padding: 1rem 16px;
+  color: white;
 }
-footer p {
+footer section.contact p {
+  font-size: 1.2rem;
+  margin: 0.5rem;
+}
+footer section.contact ion-icon {
+  color: #ECF0F1;
+  padding-right: 5px;
+}
+footer section.social {
+  display: flex;
+  justify-content: center;
+}
+footer section.social a {
+  display: block;
+  font-size: 2rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  color: white;
+}
+footer section.social a:hover {
+  background-color: #001B2E;
+}
+footer section.location {
+  font-size: 1.5rem;
+}
+footer p.legal {
   margin: 0;
   font-weight: 300;
   text-align: center;
   color: #ECF0F1;
-  background-color: #667E93;
+  background-color: #7286A0;
 }
 
 @media only screen and (min-width: 35rem) {
@@ -481,16 +490,18 @@ footer p {
   nav ul li {
     flex: 1;
   }
-  nav li.active {
-    background-color: #667E93;
-    color: #253746;
-    border-radius: 0;
+  div.allcards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
   }
-  nav a {
-    color: #ECF0F1;
+  div.allcards section {
+    flex-basis: calc(50% - 8px);
   }
-  nav a:hover {
-    color: #E3E3AC;
+  footer div {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
   }
 }
 @media only screen and (min-width: 60rem) {
@@ -515,7 +526,11 @@ footer p {
   nav ul li {
     border: none;
   }
-  section {
-    grid-template-columns: 1fr 1fr 1fr;
+  div.allcards section {
+    flex-basis: calc(33.33% - 10.6666666667px);
+  }
+  footer div {
+    display: grid;
+    grid-template-columns: auto auto auto;
   }
 }

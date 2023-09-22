@@ -47,6 +47,7 @@ h3 {
 
 #navWrapper {
   background-color: $primaryColor;
+  color: $fontColor;
 }
 
 nav {
@@ -61,7 +62,6 @@ nav {
         text-decoration: none;
         display: none;
         padding: .5rem 2vw;
-        border-top: solid 1px white;
       }
       ul.open {
         display: block;
@@ -70,78 +70,68 @@ nav {
         border-bottom: solid 1px white;
       }
 
-  }
-  li.active {
-    background-color: lighten($primaryColor, 40%);
-    color: $primaryColor;
-    width: 100%;
+      li.active {
+        background-color: $secondaryColor;
+        color: $thirdColor;
+        width: 100%;
+    
+      }
+      a {
+        display: block;
+        padding: 1rem 2vw;
+        color: $fontColor;
+        text-decoration: none;
+    
+        &:hover {
+          background-color: lighten($primaryColor, 15%);
+        }
+      }
+    
 
-  }
-  a {
-    display: block;
-    padding: 1rem 2vw;
-    color: $fontColor;
-    text-decoration: none;
-
-    &:hover {
-      background-color: lighten($primaryColor, 15%);
-      color: $primaryColor;
-    }
-  }
+  } //end of nav
 
 
 
 // main stuff
-section {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-section div {
-  width: 100%;
-  padding: 1rem $gutter;
-  img {
-    width: 100%;
-    height: auto;
+
+div.allcards {
+  padding: 0 $gutter;
+  section {
+    border: .2rem solid $thirdColor;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1rem 0;
+    h2, p, img {
+      margin: 0;
+      padding: 1rem $gutter;
+    }
+    h2 {
+      background-color: $secondaryColor;
+      font-size: 1.5rem;
+      color: $fontColor;
+      text-align: center;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    p {
+      font-style: italic;
+    }
+    a {
+      display: block;
+      background-color: $thirdColor;
+      padding: .75rem;
+      text-align: center;
+      margin: 0 3rem 1rem 3rem;
+      border-radius: 8px;
+      color: $fontColor;
+      text-decoration: none;
+    }
   }
-}
+}// end of allcards
 
-h2 {
-  text-align: center;
-  margin-bottom: 0px;
-  background-color: $secondaryColor;
-  padding: .5rem;
-  color: $fontColor;
-  border-radius: 15px 15px 0 0;
-}
-
-p {
-  color: $fontColor;
-  background-color: $primaryColor;
-  padding: .6rem;
-  text-align: center;
-  margin: 0;
-  font-weight: $lightWeight;
-}
-
-.hero img {
-  width: 100%;
-  height: auto;
-}
-
-video {
-  width: 90%;
-  margin-left: 5%;
-}
-
-details {
-  margin: .5rem $gutter;
-  padding: 1rem;
-  summary {
-    background-color: $secondaryColor;
-    color: $fontColor;
-    padding: 2rem;
-  }
-}
 
 // begin the footer
 #footerWrapper {
@@ -149,7 +139,41 @@ details {
 }
 footer {
   padding: 1rem $gutter;
-  p {
+  color: white;
+
+  section {}
+
+    section.contact {
+      p {
+        font-size: 1.2rem;
+        margin: .5rem;
+      }
+      ion-icon {
+        color: $fontColor;
+        padding-right: 5px;
+      }
+    }
+   //end of contact
+section.social {
+  display: flex;
+  justify-content: center;
+    a {
+      display: block;
+      font-size: 2rem;
+      margin: .5rem;
+      padding: .5rem;
+      color: white;
+      &:hover {
+        background-color: $thirdColor;
+      }
+    }
+
+} //end of social
+section.location {
+  font-size: 1.5rem;
+} // end of location
+
+  p.legal {
     margin: 0;
     font-weight: $lightWeight;
     text-align: center;

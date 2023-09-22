@@ -23,6 +23,14 @@ nav {
 }
 
 // main stuff
-section {
-  grid-template-columns: 1fr 1fr 1fr;
+div.allcards {
+
+  section {
+    flex-basis: calc(33.33% - ($gutter)*2/3);
+  }
+}
+
+footer div {
+  display: grid;
+  grid-template-columns: auto auto auto;
 }

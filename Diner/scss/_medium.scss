@@ -13,7 +13,7 @@ section {
 
 
 nav {
-  
+
 ul {
 list-style-type: none;
 padding: 0;
@@ -23,17 +23,23 @@ li {
   flex: 1;
 }
 }
-li.active {
-background-color: $secondaryColor;
-color: $primaryColor;
-border-radius: 0;
-}
-a {
-color: $fontColor;
+
+} //end of nav
+ 
 
 
-&:hover {
-  color: #E3E3AC;
+div.allcards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gutter;
+
+  section {
+    flex-basis: calc(50% - ($gutter)/2);
+  }
 }
-}
+
+footer div {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
 }
