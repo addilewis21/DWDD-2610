@@ -378,8 +378,7 @@ nav ul li {
   border-bottom: solid 1px white;
 }
 nav li.active {
-  background-color: #7286A0;
-  color: #001B2E;
+  background-color: #311c11;
   width: 100%;
 }
 nav a {

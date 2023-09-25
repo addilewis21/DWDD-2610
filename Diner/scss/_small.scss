@@ -71,8 +71,7 @@ nav {
       }
 
       li.active {
-        background-color: $secondaryColor;
-        color: $thirdColor;
+        background-color: darken($primaryColor, 15%);
         width: 100%;
     
       }
