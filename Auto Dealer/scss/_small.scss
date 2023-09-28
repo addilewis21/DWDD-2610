@@ -47,89 +47,170 @@ h3 {
 
 #navWrapper {
   background-color: $primaryColor;
+  color: $fontColor;
 }
 
 nav {
+  button {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    padding: .5rem;
+    color: white;
+  }
+
+  button span:nth-child(1){
+    display: block;
+  }
+  button span:nth-child(2){
+    display: none;
+  }
+  button.open span:nth-child(1) {
+    display: none;
+  }
+  button.open span:nth-child(2) {
+    display: block;
+  }
       ul{
         text-decoration: none;
+        display: none;
+        padding: .5rem 2vw;
+      }
+      ul.open {
         display: block;
-        padding: 1rem 2vw;
-        text-align: center;
-
+      }
+      ul li {
+        border-bottom: solid 1px white;
       }
 
-  }
-  li.active {
-    background-color: $secondaryColor;
-    color: $primaryColor;
-    width: 100%;
+      li.active {
+        background-color: darken($primaryColor, 15%);
+        width: 100%;
+    
+      }
+      a {
+        display: block;
+        padding: 1rem 2vw;
+        color: $fontColor;
+        text-decoration: none;
+    
+        &:hover {
+          background-color: lighten($primaryColor, 15%);
+        }
+      }
+    
 
-  }
-  a {
-    display: block;
-    padding: 1rem 2vw;
-    color: $fontColor;
-    text-decoration: none;
-
-    &:hover {
-      color: #E3E3AC;
-      background-color: #000000;
-    }
-  }
+  } //end of nav
 
 
 
 // main stuff
-section {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-section div {
-  width: 100%;
-  padding: 1rem $gutter;
+
+div.parentHero {
+  position: relative;
   img {
     width: 100%;
     height: auto;
+    display: block;
+  }
+  p{
+    position: absolute;
+    top: calc(75% - 35px);
+    right: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    font-weight: $boldWeight;
+    background-color: rgb(0, 0, 0, .5);
+    font-size: 2rem;
+    margin: 0;
   }
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 0px;
-  background-color: $secondaryColor;
-  padding: .5rem;
-  color: $fontColor;
-  border-radius: 15px 15px 0 0;
+h5 {
+  font-size: 1rem;
+  font-weight: $normalWeight;
 }
 
-p {
-  color: $fontColor;
-  background-color: $primaryColor;
-  padding: .6rem;
-  text-align: center;
-  margin: 0;
-  font-weight: $lightWeight;
-}
+//cards
+div.allcards {
+  padding: 0 $gutter;
+  section {
+    border: .1rem solid $thirdColor;
+    border-radius: 10px;
+    box-shadow: 5px 10px #888888;
+    overflow: hidden;
+    margin: 1rem 0;
+        
+        svg {
+          margin: auto;
+          margin-top: 1rem;
+          display: block;
+          position: relative;
+        }
 
-.hero img {
-  width: 100%;
-  height: auto;
-}
+    h2, p, img {
+      margin: 0;
+      padding: 1rem $gutter;
+    }
+    h2 {
+      background-color: $secondaryColor;
+      font-size: 1.5rem;
+      color: $fontColor;
+      text-align: center;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    p {
+      font-style: italic;
+    }
+    a {
+      display: block;
+      background-color: $thirdColor;
+      padding: .75rem;
+      text-align: center;
+      margin: 0 3rem 1rem 3rem;
+      border-radius: 8px;
+      color: $fontColor;
+      text-decoration: none;
+    }
 
-video {
-  width: 90%;
-  margin-left: 5%;
-}
-
-details {
-  margin: .5rem $gutter;
-  padding: 1rem;
-  summary {
-    background-color: $secondaryColor;
-    color: $fontColor;
-    padding: 2rem;
   }
+  }
+
+  //animations
+.spin:hover svg{animation: myPulse 1s 1;}
+.pulse:hover svg{animation: mySpin 1s 1;}
+
+//bounce
+  @keyframes myBounce {
+    0% {bottom: 0px; animation-timing-function: ease-out;}
+    25% {bottom: 15px; animation-timing-function: ease-in;}
+    50% {bottom: 0px; animation-timing-function: ease-out;}
+    75% {bottom: 7px; animation-timing-function: ease-in;}
+    100% {bottom: 0px; animation-timing-function: ease-out;}
+  }
+
+// spin
+@keyframes mySpin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
 }
+
+//pulse
+@keyframes myPulse {
+    0% {transform: scale(1.0);}
+    25% {transform: scale(1.5);}
+    50% {transform: scale(.75);}
+    75% {transform: scale(1.25);}
+    100% {transform: scale(1.0);}
+
+}
+
 
 // begin the footer
 #footerWrapper {
@@ -137,11 +218,52 @@ details {
 }
 footer {
   padding: 1rem $gutter;
-  p {
+  color: #001B2E;
+  text-decoration: none;
+
+    section.contact {
+      p {
+        font-size: 1.2rem;
+        margin: .5rem;
+      }
+      ion-icon {
+        color: $fontColor;
+        padding-right: 5px;
+        color: #001B2E;
+      }
+      a {
+        text-decoration: none;
+        color: #001B2E;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+   //end of contact
+section.social {
+  display: flex;
+  justify-content: center;
+    a {
+      display: block;
+      font-size: 2rem;
+      margin: .5rem;
+      padding: .5rem;
+      color: #001B2E;
+      &:hover {
+        color: white;
+      }
+    }
+
+} //end of social
+section.location {
+  font-size: 1rem;
+  margin-top: 0px;
+} // end of location
+
+  p.legal {
     margin: 0;
-    font-weight: $lightWeight;
     text-align: center;
-    color: $fontColor;
+    color: #001B2E;
     background-color: $secondaryColor;
   }
 }
