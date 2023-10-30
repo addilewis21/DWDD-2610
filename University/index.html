@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Awesome University</title>
+    <meta name="description" content="Awesome University">
+    <meta name="author" content="Addi Lewis">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap" rel="stylesheet">
+
+<link href="css/styles.css" type="text/css" rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/6f30cd5f6f.js" crossorigin="anonymous"></script>
+   
+<!-- fav icon stuff -->
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+
+</head>
+<body>
+
+    
+
+    <div id="headerWrapper"> 
+        <header>
+            <img src ="images/logocircle.png" alt="logo">  
+            <h1>Awesome University</h1>
+        </header>
+    </div>
+    
+    <div id="navWrapper">
+        <nav>
+            <button id="hamburgerBtn"><span>&#9776;</span><span>x</span></button>
+            <ul id="primaryNav">
+                <li><a href="#">Students</a></li>
+                <li class="active"><a href="#">Apply</a></li>
+                <li><a href="#">Academics</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Tuition</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="mainWrapper">
+        <main>
+          <h1>Apply</h1>
+          <p>Thanks for liking our university. You have to fill this out or we'll hunt your family.
+            It's also how we track your stuff and send you more info idek. If you have any questions
+            you can try and call us but we won't answer. 867-5309.
+          </p>
+          <h2>Contact Information</h2>
+          <form >
+            <label for="fname">First name
+                <input type="text" id="fname" name="fname" value="" required></label>
+            <label for="fname">Last Name
+                <input type="text" id="fname" name="fname" value="" required></label>
+            <label for="fname">Cell Phone
+                <input type="text" id="fname" name="fname" value="867-5309" required></label>
+            <label for="fname">Email
+                <input type="text" id="fname" name="fname" value="gangang@gmail.com" required></label>
+            <label for="fname">Address
+                <input type="text" id="fname" name="fname" value=""></label>
+            <label for="fname">City
+                <input type="text" id="fname" name="fname" value=""></label>
+            <label for="fname">State
+                <input type="text" id="fname" name="fname" value=""></label>
+            <label for="lname">Zipcode
+                <input type="text" id="lname" name="lname" value=""></label>
+
+            <h2>Communication Preferences</h2>
+                <label><input type="radio" name="text">Send Text Message Updates</label>
+                <label><input type="radio" name="email">Send Email Updates</label>   
+                <label><input type="radio" name="mail">Smail Mail Updates</label>
+
+            <h2>Previous School Information</h2>
+            <label>School type
+            <select>
+                <option value="ps">Please Select</option>
+                <option value="mu">Monsters University</option>
+                <option value="hs">High School</option>
+                <option value="elm">Elementary School</option>
+            </select> </label>
+
+            <label>High Schoool Graduation Date</label>
+                <input type="date">
+
+            <h2>Education Completed</h2>
+                <label><input type="checkbox" name="education1">GED</label>
+                <label><input type="checkbox" name="education2">High School Diploma</label>
+                <label><input type="checkbox" name="education3">Two Year Associates Degree</label>
+            
+            <h2>Account Information</h2>
+            <label for="lname">Username (6-10 letters) 
+                <input type="text" required minlength="6" title="Please enter a UserName that's at least 6 char long"></label>
+
+                <label for="lname">Password (at least 6 characters long)
+                <input type="password" name="password" required pattern=[A-Za-z0-6]{6-12} ></label>
+
+            <input type="submit" value="Submit">
+            
+          </form> 
+        </main>
+    </div>
+
+    <div id="footerWrapper">
+        <footer>
+            <p class="legal">&copy; <span id="year">x</span> &bull; Addi Lewis</p>
+        </footer>
+    </div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="js/scripts.js" type="module"> </script>
+
+</body>
+</html>

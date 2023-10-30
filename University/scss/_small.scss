@@ -1,0 +1,176 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  height: 100%;
+}
+
+/*---- apply a natural box layout model to all elements -------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font-family: $defaultFont;
+  font-weight: $normalWeight;
+  color: $thirdColor;
+  background-color: $fontColor;
+}
+
+#headerWrapper {
+  background-color: $thirdColor;
+  color: $fontColor; 
+}
+header {
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem $gutter;
+  gap: 8px;
+  h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: $normalWeight;
+  }
+}
+
+h3 {
+  font-weight: $boldWeight;
+  font-size: 1.5rem;
+  margin-left: 1.2rem;
+  margin-bottom: 0;
+
+}
+
+#navWrapper {
+  background-color: $primaryColor;
+  color: $fontColor;
+}
+
+nav {
+
+  button {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    padding: .5rem;
+    color: white;
+    justify-content: right;
+  }
+
+  button span:nth-child(1){
+    display: block;
+  }
+  button span:nth-child(2){
+    display: none;
+  }
+  button.open span:nth-child(1) {
+    display: none;
+  }
+  button.open span:nth-child(2) {
+    display: block;
+  }
+      ul{
+        text-decoration: none;
+        display: none;
+        padding: .5rem 2vw;
+      }
+      ul.open {
+        display: block;
+        height: 100vh;
+        text-align: center;
+      }
+      ul li {
+        border-bottom: solid 1px white;
+      }
+
+      li.active {
+        background-color: darken($primaryColor, 15%);
+        width: 100%;
+    
+      }
+      a {
+        display: block;
+        padding: 1rem 2vw;
+        color: $fontColor;
+        text-decoration: none;
+    
+        &:hover {
+          background-color: lighten($primaryColor, 15%);
+        }
+      }
+    
+
+  } //end of nav
+
+  #hamburgerBtn {
+    justify-content: right;
+    display: block;
+  }
+
+//main
+h2 {
+  font-size: 1rem;
+  border-bottom: 1px solid #bfbfbf;
+  color: $thirdColor;
+}
+
+#mainWrapper {
+  margin: 2rem;
+}
+
+form {
+  label {
+    display: block;
+    font-size: .8rem;
+    margin-top: .8rem;
+  }
+  input[type=text],
+  input[type=number],
+  input[type=email],
+  input[type=password],
+  input[type=date],
+  select
+   {
+    border: 1px solid #999;
+    border-left-width: 5px;
+    border-radius: 0 15px 15px 0;
+    height: 2.1rem;
+    width: 250px;
+    margin: .1rem 0 .1rem 0;
+    padding: .5rem $gutter;
+    display: block;
+  }
+
+  input:required {border-left-color: red;}
+
+  input[type=submit] {
+    border: none;
+    background-color: $primaryColor;
+    color: $fontColor;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 2rem;
+    width: 250px;
+    font-size: 1.2rem;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}
+
+
+
+
+// begin the footer
+#footerWrapper {
+  background-color: $secondaryColor;
+}
+footer {
+  padding: 1rem $gutter;
+  color: #001B2E;
+  text-decoration: none;
+  text-align: center;
+}

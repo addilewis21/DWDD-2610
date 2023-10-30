@@ -1,0 +1,63 @@
+header {
+  padding: 2rem $gutter;
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+// main stuff
+section {
+  grid-template-columns: 1fr 1fr;
+}
+
+
+
+nav {
+height: auto;
+ul {
+list-style-type: none;
+padding: 0;
+margin: 0;
+display: flex;
+button {
+  display: none;
+}
+ul {
+  display: flex;
+  border: none;
+}
+ul.open {
+  display: flex;
+}
+ul li {
+  border: none;
+}
+li {
+  flex: 1;
+}
+}
+
+} 
+#hamburgerBtn {
+  display: none;
+}
+  
+  //end of nav
+ 
+
+
+div.allcards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gutter;
+
+  section {
+    flex-basis: calc(50% - ($gutter)/2);
+  }
+}
+
+footer div {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+}
