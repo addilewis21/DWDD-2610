@@ -13,18 +13,36 @@ section {
 
 
 nav {
-
-ul {
-list-style-type: none;
-padding: 0;
-margin: 0;
-display: flex;
-li {
-  flex: 1;
-}
-}
-
-} //end of nav
+  height: auto;
+  ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  button {
+    display: none;
+  }
+  ul {
+    display: flex;
+    border: none;
+  }
+  ul.open {
+    display: flex;
+  }
+  ul li {
+    border: none;
+  }
+  li {
+    flex: 1;
+  }
+  }
+  
+  } 
+  #hamburgerBtn {
+    display: none;
+  }
+    
+    //end of nav
  
 
 // create the for loop

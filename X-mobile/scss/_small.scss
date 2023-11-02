@@ -46,6 +46,11 @@ h3 {
 }
 
 
+#navWrapper {
+  background-color: $primaryColor;
+  color: $fontColor;
+}
+
 nav {
   button {
     background: transparent;
@@ -53,19 +58,6 @@ nav {
     font-size: 1.5rem;
     padding: .5rem;
     color: white;
-  }
-
-  button span:nth-child(1){
-    display: block;
-  }
-  button span:nth-child(2){
-    display: none;
-  }
-  button.open span:nth-child(1) {
-    display: none;
-  }
-  button.open span:nth-child(2) {
-    display: block;
   }
       ul{
         text-decoration: none;
@@ -91,12 +83,13 @@ nav {
         text-decoration: none;
     
         &:hover {
-          background-color: darken($primaryColor, 35%);
+          background-color: lighten($primaryColor, 15%);
         }
       }
     
 
   } //end of nav
+
 
 // styling the rows
 .row {
