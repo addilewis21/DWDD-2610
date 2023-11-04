@@ -40,9 +40,6 @@ header {
 h3 {
   font-weight: $boldWeight;
   font-size: 1.5rem;
-  margin-left: 1.2rem;
-  margin-bottom: 0;
-
 }
 
 #navWrapper {
@@ -102,29 +99,34 @@ nav {
 
   } //end of nav
 
+  main {
+    padding: 2rem;
+  }
 
 
 // main stuff
-
-div.parentHero {
+.hero {
   position: relative;
-  img {
+  div {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0;
+    color: white;
+    padding: 30px;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.8045343137254902) 76%);
+    h3 {
+      text-shadow: 0 0 2px #000;
+    }
+    p {
+      text-shadow: 0 0 2px #000;
+    }
+  }
+
+  video {
     width: 100%;
     height: auto;
-    display: block;
-  }
-  p{
-    position: absolute;
-    top: calc(75% - 35px);
-    right: 0;
-    left: 0;
-    padding: 1rem;
-    text-align: center;
-    color: white;
-    font-weight: $boldWeight;
-    background-color: rgb(0, 0, 0, .5);
-    font-size: 2rem;
-    margin: 0;
   }
 }
 
@@ -133,86 +135,81 @@ h5 {
   font-weight: $normalWeight;
 }
 
-//cards
-div.allcards {
-  padding: 0 $gutter;
-  section {
-    border: .1rem solid $thirdColor;
-    border-radius: 10px;
-    box-shadow: 5px 10px #888888;
-    overflow: hidden;
-    margin: 1rem 0;
-        
-        svg {
-          margin: auto;
-          margin-top: 1rem;
-          display: block;
-          position: relative;
-        }
-
-    h2, p, img {
-      margin: 0;
-      padding: 1rem $gutter;
-    }
-    h2 {
-      background-color: $secondaryColor;
-      font-size: 1.5rem;
-      color: $fontColor;
-      text-align: center;
-    }
-    img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    p {
-      font-style: italic;
-    }
-    a {
-      display: block;
-      background-color: $thirdColor;
-      padding: .75rem;
-      text-align: center;
-      margin: 0 3rem 1rem 3rem;
-      border-radius: 8px;
-      color: $fontColor;
-      text-decoration: none;
-    }
-
-  }
-  }
-
-  //animations
-.spin:hover svg{animation: myPulse 1s 1;}
-.pulse:hover svg{animation: mySpin 1s 1;}
-
-//bounce
-  @keyframes myBounce {
-    0% {bottom: 0px; animation-timing-function: ease-out;}
-    25% {bottom: 15px; animation-timing-function: ease-in;}
-    50% {bottom: 0px; animation-timing-function: ease-out;}
-    75% {bottom: 7px; animation-timing-function: ease-in;}
-    100% {bottom: 0px; animation-timing-function: ease-out;}
-  }
-
-// spin
-@keyframes mySpin {
-  from {transform: rotate(0deg);}
-  to {transform: rotate(360deg);}
+h2 {
+  font-size: 1.2rem;
 }
 
-//pulse
-@keyframes myPulse {
-    0% {transform: scale(1.0);}
-    25% {transform: scale(1.5);}
-    50% {transform: scale(.75);}
-    75% {transform: scale(1.25);}
-    100% {transform: scale(1.0);}
-
+p.card {
+  font-size: .8rem;
 }
 
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+}
 
-// begin the footer
+button.girl {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: $primaryColor;
+  color: white;
+  transform: rotateY(180deg);
+  padding: 20px;
+}
+
 #footerWrapper {
   background-color: $secondaryColor;
 }
@@ -220,50 +217,5 @@ footer {
   padding: 1rem $gutter;
   color: #001B2E;
   text-decoration: none;
-
-    section.contact {
-      p {
-        font-size: 1.2rem;
-        margin: .5rem;
-      }
-      ion-icon {
-        color: $fontColor;
-        padding-right: 5px;
-        color: #001B2E;
-      }
-      a {
-        text-decoration: none;
-        color: #001B2E;
-        &:hover {
-          color: white;
-        }
-      }
-    }
-   //end of contact
-section.social {
-  display: flex;
-  justify-content: center;
-    a {
-      display: block;
-      font-size: 2rem;
-      margin: .5rem;
-      padding: .5rem;
-      color: #001B2E;
-      &:hover {
-        color: white;
-      }
-    }
-
-} //end of social
-section.location {
-  font-size: 1rem;
-  margin-top: 0px;
-} // end of location
-
-  p.legal {
-    margin: 0;
-    text-align: center;
-    color: #001B2E;
-    background-color: $secondaryColor;
-  }
+  text-align: center;
 }
