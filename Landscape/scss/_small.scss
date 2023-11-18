@@ -49,9 +49,7 @@ h3 {
 
 #primaryNav li.parents > a:after {
   font-size: .75rem;
-  content: "\25BC";
   color: rgba(255,255,255, .5);
-  float: right;
 }
 
 #primaryNav li ul{
@@ -60,11 +58,14 @@ h3 {
   padding: 0;
 }
 
-#primaryNav li:hover ul {display: block}
+#primaryNav li:hover ul {
+  display: block;
+}
 
 #navWrapper {
   background-color: $primaryColor;
   color: $fontColor;
+
 }
 
 nav {

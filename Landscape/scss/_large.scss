@@ -1,4 +1,4 @@
-header, nav, main, footer {
+header, main, footer {
   max-width: 60rem;
   margin: auto;
 }
@@ -15,12 +15,14 @@ nav {
   }
   ul.open {
     display: flex;
+    float: left;
   }
   ul li {
     border: none;
   }
 
 }
+
 
 // main stuff
 div.allcards {
