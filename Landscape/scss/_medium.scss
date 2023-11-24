@@ -1,3 +1,5 @@
+@import "path/to/your/imported/file"; // Add missing import
+
 header {
   padding: 2rem $gutter;
   h1 {
@@ -5,34 +7,32 @@ header {
   }
 }
 
+@media (min-width: 768px) { // adjust the value as needed
+  li:has(ul.subnav):hover > ul.subnav {
+    display: flex;
+    flex-direction: row; // This will make the items align horizontally
+    justify-content: center; // This will center the items horizontally
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: red; // Replace #yourColor with the color you want
+  }
+}
 // main stuff
-
-nav {
-
   button {
     display: none;
   }
 
-ul {
-list-style-type: none;
-padding: 0;
-margin: 0;
-display: flex;
-li {
-  flex: 1;
-}
-}
-
-} //end of nav
+//end of nav
  
 
 div.parent {
   section {
     display: grid;
-    grid-template-columns: 140px auto;
+  }
     padding: 10px;
 }
-}
+
 
 div.allcards {
   display: flex;

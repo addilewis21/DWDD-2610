@@ -118,7 +118,19 @@ nav {
       }
     
 
-  } //end of nav
+  } 
+
+//add a subnav
+ul.subnav {
+  display: flex;
+  flex-direction: row; // This will make the items align horizontally
+  justify-content: center; // This will center the items horizontally
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+  //end of nav
 
 
 
