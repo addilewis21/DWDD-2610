@@ -34,7 +34,7 @@ for (let x = 0; x < reviews.length; x++ ) {
 // Create stars that align with the rating
 for (let step = 0; step < reviews[x].stars; step++) {
   let img = document.createElement('img'); 
-  img.src = '../images/star-solid.svg';
+  img.src = '../images/star.png';
   myRating.appendChild(img);
 }
 
