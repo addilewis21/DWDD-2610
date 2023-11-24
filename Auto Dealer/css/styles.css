@@ -530,6 +530,21 @@ div.allcards section a {
     transform: scale(1);
   }
 }
+div#cards {
+  display: block;
+}
+div#cards section {
+  display: inline-block;
+  width: 50%;
+  height: auto;
+  padding: 1rem;
+  height: 100%;
+}
+div#cards img {
+  width: 20px;
+  height: auto;
+}
+
 #footerWrapper {
   background-color: #7286A0;
 }

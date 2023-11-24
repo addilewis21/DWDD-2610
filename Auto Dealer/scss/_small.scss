@@ -211,6 +211,27 @@ div.allcards {
 
 }
 
+div#cards {
+  display: block;
+  section {
+    //having sections display next to each other
+    display: inline-block;
+    width: 50%;
+    height: auto;
+    padding: 1rem;
+    height: 100%;
+  }
+
+  img {
+    width: 20px;
+    height: auto;
+    
+  
+  }
+
+
+}
+
 
 // begin the footer
 #footerWrapper {

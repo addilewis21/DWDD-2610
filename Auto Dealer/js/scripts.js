@@ -14,22 +14,31 @@ x.onclick = toggleMenu;
 
 //get reviews data
 import {reviews} from '../media/reviews.js';
+
 console.log(reviews);
 
+
+//add reviews to id="cards"
 const myTarget = document.querySelector("#cards");
 
-for (let x = 0; x < reviews.lenth; x++ ) {
+for (let x = 0; x < reviews.length; x++ ) {
 
   //create a section
   const mySection = document.createElement('section')
   const myName = document.createElement('h3')
-  myName.textContext = reviews [x].name
-
+  
+  //add content to h3
+  myName.textContent = reviews[x].name
+  
   const myRating = document.createElement('div')
+// Create stars that align with the rating
+for (let step = 0; step < reviews[x].stars; step++) {
+  let img = document.createElement('img'); 
+  img.src = '../images/star-solid.svg';
+  myRating.appendChild(img);
+}
 
-  const genIndicator = document.createElement('img')
-  genIndicator.src = "../images/star-solid.svg"
-  myRating.appendChild(genIndicator)
+
 
   
   const myReview = document.createElement('p')
@@ -42,4 +51,8 @@ for (let x = 0; x < reviews.lenth; x++ ) {
   mySection.appendChild(myRating);
 
   myTarget.appendChild(mySection);
+
+  console.log(mySection);
+  console.log(myName);
+  console.log(myReview);
 }
