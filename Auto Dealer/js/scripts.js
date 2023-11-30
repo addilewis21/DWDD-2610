@@ -35,7 +35,7 @@ for (let x = 0; x < reviews.length; x++ ) {
   for (let step = 0; step < reviews[x].stars; step++) {
     let img = document.createElement('img'); 
     //add image source from images folder
-    img.src = '../images/star.png';
+    img.src = './images/star.png';
     img.alt = 'star';
     myRating.appendChild(img);
   }
