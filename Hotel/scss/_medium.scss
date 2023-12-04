@@ -1,0 +1,39 @@
+header {
+  padding: 2rem $gutter;
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+// main stuff
+section {
+  grid-template-columns: 1fr 1fr;
+}
+
+
+
+nav {
+  
+ul {
+list-style-type: none;
+padding: 0;
+margin: 0;
+display: flex;
+li {
+  flex: 1;
+}
+}
+li.active {
+background-color: $secondaryColor;
+color: $primaryColor;
+border-radius: 0;
+}
+a {
+color: $fontColor;
+
+
+&:hover {
+  color: #E3E3AC;
+}
+}
+}
