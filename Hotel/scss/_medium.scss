@@ -10,6 +10,23 @@ section {
   grid-template-columns: 1fr 1fr;
 }
 
+//edit cards to be one column
+#cards {
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  section {
+    height: auto;
+    width: 100%;
+  }
+  img {
+    width: 50%;
+    height: auto;
+    float: left;
+  }
+}
+
+
+
 
 
 nav {

@@ -120,38 +120,55 @@ nav {
   }
 
 
-
-
-// main stuff
-section {
+//style the cards on the home page
+#cards{
   display: grid;
-  grid-template-columns: 1fr;
-}
-section div {
-  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
   padding: 1rem $gutter;
+  margin: 0 auto;
+  max-width: 1200px;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  color: #195932;
+
+  section {
+    background-color: #EFEFEF;
+    border: 8px solid #195932;
+    border-radius: 10px;
+    text-align: center;
+    height: 380px;
+  }
+  h2 {
+    font-weight: $boldWeight;
+    font-size: 1.5rem;
+  }
+  address {
+    font-size: 1.1rem;
+    margin: 1rem;
+  }
   img {
     width: 100%;
     height: auto;
+    //float image above text
+    float: top;
   }
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 0px;
-  background-color: $secondaryColor;
-  padding: .5rem;
-  color: $fontColor;
-  border-radius: 15px 15px 0 0;
-}
-
-p {
-  color: $fontColor;
-  background-color: $primaryColor;
-  padding: .6rem;
-  text-align: center;
-  margin: 0;
-  font-weight: $lightWeight;
+  a {
+    text-decoration: none;
+    color: #195932;
+    font-weight: $boldWeight;
+    font-size: 1.1rem;
+    border: 3px solid #195932;
+    margin: 2rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding: .5rem;
+  }
+  a:hover {
+    background-color: #195932;
+    color: #EFEFEF;
+  }
 }
 
 

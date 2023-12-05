@@ -27,3 +27,36 @@ nav {
   }
 }
 
+//edit cards to be two columns
+#cards {
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  section {
+    height: auto;
+    width: 100%;
+  }
+  img {
+    width: 50%;
+    height: auto;
+    float: left;
+  }
+  h2 {
+    margin: .2rem;
+    margin-top: 1rem;
+  }
+  p {
+    margin: 0;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    width: 40%;
+    text-align: center;
+    margin: auto;
+    margin-right: 25px;
+    margin-bottom: 1rem;
+    //move a tag to the right of the image
+    float: right;
+
+  }
+}
