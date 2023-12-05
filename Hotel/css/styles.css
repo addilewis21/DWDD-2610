@@ -335,16 +335,40 @@ body {
   color: #ffffed;
 }
 
+#pageWrapper {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.moveOver > .content {
+  transform: translateX(-180px);
+}
+
+.content {
+  transition: transform 500ms ease;
+}
+
 header {
-  display: flex;
-  align-items: flex-end;
-  padding: 1rem 16px;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: 51px auto 48px;
+  align-items: center;
+  padding: 0.5rem 2vw;
 }
 header h1 {
   margin: 0;
   font-size: 1.2rem;
   font-weight: 500;
+}
+header button {
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  align-self: start;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  text-align: right;
+  color: #ffffed;
 }
 
 h3 {
@@ -358,28 +382,43 @@ h3 {
   background-color: #6A687A;
 }
 
-nav ul {
+nav {
+  background-color: #6A687A;
+  width: 180px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateX(100%);
+  display: block;
+  text-decoration: none;
+}
+nav div {
+  display: block;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  background-color: white;
+  color: #be7c4d;
+  font-family: 700;
+}
+nav ul li a {
   text-decoration: none;
   display: block;
-  padding: 1rem 2vw;
+  padding: 0.9rem 0.5rem;
+  text-align: right;
+  border-bottom: 1px rgba(0, 0, 0, 0.25) solid;
+  color: white;
 }
-
-li.active {
+nav ul li a:hover {
+  background-color: #be7c4d;
+  color: white;
+  text-decoration: none;
+}
+nav li.active a {
+  color: white;
   background-color: #083529;
-  color: #6A687A;
-  width: 100%;
-  border-radius: 8px;
-}
-
-a {
-  display: block;
-  padding: 1rem 2vw;
-  color: #ffffed;
   text-decoration: none;
-}
-a:hover {
-  color: #E3E3AC;
-  background-color: #000000;
 }
 
 section {
@@ -467,5 +506,25 @@ footer p {
   }
   section {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  #hamburgerBtn {
+    display: none;
+  }
+  nav {
+    position: static;
+    transform: translateX(0);
+    width: 100%;
+  }
+  nav div {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  nav ul li a {
+    border: none;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0.6rem 1.5rem;
   }
 }

@@ -7,3 +7,23 @@ header, nav, main, footer {
 section {
   grid-template-columns: 1fr 1fr 1fr;
 }
+
+#hamburgerBtn {
+  display: none;
+}
+nav {
+  position: static;
+  transform: translateX(0);
+  width: 100%;
+  div {display: none;}
+  ul {
+    display: flex;
+    border-left: 1px solid rgba(0,0,0,0.2);
+  }
+  ul li a {
+    border: none;
+    border-right: 1px solid rgba(0,0,0,0.2);
+    padding: .6rem 1.5rem;
+  }
+}
+
