@@ -22,7 +22,7 @@ body {
 }
 
 #headerWrapper {
-  background-color: $thirdColor;
+  background-color: $primaryColor;
   color: $fontColor; 
 }
 
@@ -72,11 +72,11 @@ h3 {
 }
 
 #navWrapper {
-  background-color: $primaryColor;
+  background-color: $fontColor;
 }
 
 nav {
-  background-color: $primaryColor;
+  background-color: $fontColor;
   width: 180px;
   position: absolute;
   top: 0;
@@ -84,7 +84,8 @@ nav {
   bottom: 0;
   transform: translateX(100%);
   display: block;
-  text-decoration: none;
+  text-align: left;
+  
   
   
   div {
@@ -92,29 +93,35 @@ nav {
     text-align: center;
     padding: 1.5rem;
     font-size: 1.1rem;
-    background-color: white;
-    color: $thirdColor;
-    font-family: $boldWeight;
+    background-color: $fontColor;
+    color: $primaryColor;
+    font-weight: $boldWeight;
+    text-decoration: none;
+    
+  }
+  ul {
+    list-style-type: none; 
+    padding: 0;
+
+
   }
       ul li a{
-        text-decoration: none;
         display: block;
         padding: .9rem .5rem;
-        text-align: right;
         border-bottom: 1px rgba(0,0,0,0.25) solid;
-        color: white;
-      
+        color: $primaryColor;
+        text-align: left;
+        text-decoration: none;
+        margin-left: 0;
 
       }
       ul li a:hover{
-        background-color: $thirdColor;
-        color: white;
-        text-decoration: none;
+        background-color: $primaryColor;
+        color: $fontColor;
       }
       li.active a {
-        color: white;
+        color: $fontColor;
         background-color: $secondaryColor;
-        text-decoration: none;
       }
 
   }

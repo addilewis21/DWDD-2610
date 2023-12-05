@@ -331,7 +331,7 @@ body {
 }
 
 #headerWrapper {
-  background-color: #be7c4d;
+  background-color: #195932;
   color: #EFEFEF;
 }
 
@@ -379,11 +379,11 @@ h3 {
 }
 
 #navWrapper {
-  background-color: #6A687A;
+  background-color: #EFEFEF;
 }
 
 nav {
-  background-color: #6A687A;
+  background-color: #EFEFEF;
   width: 180px;
   position: absolute;
   top: 0;
@@ -391,34 +391,38 @@ nav {
   bottom: 0;
   transform: translateX(100%);
   display: block;
-  text-decoration: none;
+  text-align: left;
 }
 nav div {
   display: block;
   text-align: center;
   padding: 1.5rem;
   font-size: 1.1rem;
-  background-color: white;
-  color: #be7c4d;
-  font-family: 700;
+  background-color: #EFEFEF;
+  color: #195932;
+  font-weight: 700;
+  text-decoration: none;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
 }
 nav ul li a {
-  text-decoration: none;
   display: block;
   padding: 0.9rem 0.5rem;
-  text-align: right;
   border-bottom: 1px rgba(0, 0, 0, 0.25) solid;
-  color: white;
+  color: #195932;
+  text-align: left;
+  text-decoration: none;
+  margin-left: 0;
 }
 nav ul li a:hover {
-  background-color: #be7c4d;
-  color: white;
-  text-decoration: none;
+  background-color: #195932;
+  color: #EFEFEF;
 }
 nav li.active a {
-  color: white;
+  color: #EFEFEF;
   background-color: #083529;
-  text-decoration: none;
 }
 
 #cards {
@@ -511,14 +515,14 @@ footer p {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex;
+    display: block;
   }
   nav ul li {
     flex: 1;
   }
   nav li.active {
     background-color: #083529;
-    color: #6A687A;
+    color: #195932;
     border-radius: 0;
   }
   nav a {
