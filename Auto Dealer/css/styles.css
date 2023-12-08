@@ -330,6 +330,10 @@ body {
   background-color: #ECF0F1;
 }
 
+#logoImage {
+  width: 200px; /* default size */
+}
+
 #headerWrapper {
   background-color: #001B2E;
   color: #ECF0F1;

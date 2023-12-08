@@ -21,6 +21,10 @@ body {
   background-color: $fontColor;
 }
 
+#logoImage {
+  width: 200px; /* default size */
+}
+
 #headerWrapper {
   background-color: $thirdColor;
   color: $fontColor; 
