@@ -323,199 +323,256 @@ html {
 }
 
 body {
-  height: 100%;
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
-  color: #001B2E;
-  background-color: #ECF0F1;
-}
-
-#headerWrapper {
-  background-color: #001B2E;
-  color: #ECF0F1;
-}
-
-header {
-  display: flex;
-  align-items: flex-end;
-  padding: 1rem 16px;
-  gap: 8px;
-}
-header h1 {
-  margin: 0;
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
-h3 {
-  font-weight: 700;
-  font-size: 1.5rem;
+  color: black;
+  background-color: white;
 }
 
 #navWrapper {
-  background-color: #6A3C25;
-  color: #ECF0F1;
+  background-color: white;
+  position: sticky;
+  top: 0;
 }
 
-nav button {
-  background: transparent;
-  border: none;
-  font-size: 1.5rem;
-  padding: 0.5rem;
-  color: white;
-}
-nav button span:nth-child(1) {
-  display: block;
-}
-nav button span:nth-child(2) {
-  display: none;
-}
-nav button.open span:nth-child(1) {
-  display: none;
-}
-nav button.open span:nth-child(2) {
-  display: block;
-}
 nav ul {
   text-decoration: none;
-  display: none;
   padding: 0.5rem 2vw;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
 }
-nav ul.open {
+nav ul a {
   display: block;
-}
-nav ul li {
-  border-bottom: solid 1px white;
-}
-nav li.active {
-  background-color: #311c11;
-  width: 100%;
-}
-nav a {
-  display: block;
-  padding: 1rem 2vw;
-  color: #ECF0F1;
   text-decoration: none;
+  padding: 0.75rem;
+  color: black;
 }
-nav a:hover {
-  background-color: #a35c39;
-}
-
-main {
-  padding: 2rem;
-}
-
-.hero {
-  position: relative;
-}
-.hero div {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0;
-  color: white;
-  padding: 30px;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.8045343137) 76%);
-}
-.hero div h3 {
-  text-shadow: 0 0 2px #000;
-}
-.hero div p {
-  text-shadow: 0 0 2px #000;
-}
-.hero video {
-  width: 100%;
+nav ul a img {
+  width: 25px;
   height: auto;
 }
-
-h5 {
-  font-size: 1rem;
-  font-weight: 500;
+nav ul a span {
+  display: none;
+}
+nav ul a.active {
+  background-color: #04AAD2;
+}
+nav ul a:hover {
+  background-color: #49318C;
 }
 
-h2 {
-  font-size: 1.2rem;
-}
-
-p.card {
-  font-size: 0.8rem;
-}
-
-.parent {
+#hero {
+  height: 100vh;
+  text-align: center;
+  padding: 4rem;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
+  background-color: #49318C;
+  text-align: left;
+}
+#hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0.2rem;
+}
+#hero p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0.2rem;
+}
+
+section {
+  height: 100vh;
+  color: white;
   padding: 1rem;
 }
 
-button.girl {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: white;
-  color: black;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
+#about {
+  background-color: #49318C;
+}
+
+#edu {
+  background-color: #045061;
+}
+#edu img {
+  width: 90%;
+  height: auto;
+  margin: 1rem;
+}
+#edu div.card {
+  border: 3px solid white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
   text-align: center;
+  height: 220px;
+}
+#edu div.card h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 0.5rem;
+  background-color: white;
+  color: #045061;
+}
+#edu div.card p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 0.6rem;
+}
+
+#goals {
+  background-color: #803820;
+  height: auto;
+}
+#goals div.card {
+  border: 3px solid white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  text-align: left;
+  height: auto;
+}
+#goals div.card h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 0.5rem;
+  background-color: white;
+  color: #803820;
+  text-align: center;
+}
+#goals div.card p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 1rem;
+}
+#goals div.card button {
+  border-radius: 5px;
+  background-color: white;
+  color: #803820;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  margin-left: 20%;
+  margin-bottom: 1rem;
+  width: 50%;
+}
+#goals div.card button a {
   text-decoration: none;
+  color: #803820;
+}
+
+#work {
+  background-color: #49318C;
+  height: auto;
+}
+#work div.card {
+  border: 3px solid white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+  text-align: left;
+  height: auto;
+}
+#work div.card h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 0.5rem;
+  background-color: white;
+  color: #49318C;
+  text-align: center;
+}
+#work div.card p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 1rem;
+}
+#work div.card img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 100%;
+}
+#work div.card button {
+  border-radius: 5px;
+  background-color: white;
+  color: #49318C;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 1rem;
+  width: 50%;
+}
+#work div.card button a {
+  text-decoration: none;
+  color: #49318C;
+}
+
+#contact {
+  background-color: #04AAD2;
+  height: auto;
+}
+#contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+#contact form label {
+  margin-top: 1rem;
+}
+#contact form input, #contact form textarea {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  background-color: #28d2fb;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+}
+#contact form textarea {
+  padding: 2rem;
+}
+#contact form button {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  background-color: #036d87;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  transition-duration: 0.4s;
   cursor: pointer;
 }
-
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 200px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+#contact form button:hover {
+  background-color: #45a049;
 }
 
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-
-/* Style the back side */
-.flip-card-back {
-  background-color: #6A3C25;
-  color: white;
-  transform: rotateY(180deg);
-  padding: 20px;
+div.social img {
+  width: 50px;
+  height: auto;
 }
 
 #footerWrapper {
-  background-color: #7286A0;
+  background-color: #803820;
 }
 
 footer {
   padding: 1rem 16px;
-  color: #001B2E;
+  color: white;
   text-decoration: none;
   text-align: center;
 }
@@ -539,13 +596,54 @@ footer {
   nav ul li {
     flex: 1;
   }
-  div.allcards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
+  #edu div.card {
+    flex-direction: row;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
   }
-  div.allcards section {
-    flex-basis: calc(50% - 8px);
+  #edu img {
+    width: 95%;
+    height: auto;
+    margin: 1rem;
+  }
+  #goals div.allCards {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    margin-right: 5.5rem;
+    width: 100%;
+  }
+  #goals div.allCards button {
+    width: 70%;
+    margin-left: 2rem;
+  }
+  #work div.allCards {
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  #work div.allCards div.card p {
+    font-size: 1.3rem;
+  }
+  #work div.allCards button {
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+  #contact form {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  #contact form button {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 1rem;
   }
   footer div {
     display: grid;
@@ -554,29 +652,84 @@ footer {
   }
 }
 @media only screen and (min-width: 60rem) {
-  header, nav, main, footer {
-    max-width: 60rem;
-    margin: auto;
+  body {
+    display: grid;
+    grid-template-columns: 250px auto;
   }
-  nav {
-    display: flex;
-    justify-content: left;
-  }
-  nav button {
-    display: none;
+  #navWrapper {
+    grid-row: 1/span 3;
+    position: relative;
   }
   nav ul {
-    display: flex;
-    border: none;
-  }
-  nav ul.open {
-    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
   }
   nav ul li {
-    border: none;
+    flex: none;
+    color: black;
   }
-  div.allcards section {
-    flex-basis: calc(25% - 16px);
+  nav ul a {
+    text-align: right;
+    margin-left: 2rem;
+  }
+  nav ul a img {
+    display: none;
+  }
+  nav ul a span {
+    display: block;
+  }
+  nav ul a.active {
+    background-color: #04AAD2;
+  }
+  #edu div.card {
+    flex-direction: row;
+    width: 46%;
+    float: right;
+    margin: 1rem;
+    text-align: center;
+  }
+  #edu img {
+    width: 97%;
+    height: auto;
+    margin: 1rem;
+  }
+  #goals {
+    display: flex;
+    justify-content: space-between;
+  }
+  #goals div.card {
+    flex-direction: row;
+    width: 30%;
+    margin: 1rem;
+    margin-top: 5rem;
+  }
+  #goals div.card button {
+    margin-left: 2rem;
+    width: 70%;
+    padding: 0.7rem;
+  }
+  #work div.allCards {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+  }
+  #work div.allCards div.card {
+    flex-direction: row;
+    width: 30%;
+    margin: 1rem;
+  }
+  #work div.allCards div.card p {
+    font-size: 1rem;
+  }
+  #work div.allCards div.card button {
+    padding: 0.7rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    width: 60%;
   }
   footer div {
     display: grid;

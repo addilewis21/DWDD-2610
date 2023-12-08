@@ -25,94 +25,126 @@
 </head>
 <body>
 
-    
-
-    <div id="headerWrapper"> 
-        <header>
-            <img src ="images/logocircle.png" alt="logo">  
-            <h1>Tech Conference</h1>
-        </header>
-    </div>
-    
     <div id="navWrapper">
         <nav>
-            <button id="hamburgerBtn"><span>&#9776;</span><span>x</span></button>
             <ul id="primaryNav">
-                <li><a href="#">Schedule</a></li>
-                <li><a href="#">Workshops</a></li>
-                <li><a href="#">Tickets</a></li>
-                <li class="active"><a href="#">Speakers</a></li>
-                <li><a href="#">Partners</a></li>
+              <li class="active"><a href="#about"><img src="images/user.svg"><span>About Me</span></a></li>
+                <li><a href="#edu"><img src="images/school.svg"><span>Education</span></a></li>
+                <li><a href="#goals"><img src="images/goals.svg"><span>Career Goals</span></a></li>
+                <li><a href="#work"><img src="images/laptop-computer.svg"><span>My Work</span></a></li>
+                <li><a href="#contact"><img src="images/work-alt-bag.svg"><span>Contact</span></a></li>
             </ul>
         </nav>
     </div>
 
     <div id="mainWrapper">
-        <main>
+        <main>      
+          <section id="about">
+            <div id="hero">
+              <h1>Addi Lewis</h1>
+              <p>Web developer and designer portfolio</p>
+            </div>
+          </section>
 
-        <div class="hero">
-            <video poster="images/img2.jpg" autoplay muted playsinline loop width="800" height="300">
-                <source src="media/videoherohb.webm" type="video/webm" />
-                <source src="media/videoherohb.mp4" type="video/mp4" />
-            </video>
-            <div>
-                <h3>Join our conference</h3>
-                <p>Buy your tickets now!</p>
+          <section id="edu">
+            <h1>Education</h1>
+            <img src="images/grad.jpg" alt="grad">
+            <!--create 2 cards that alling horizontally in the section--> 
+            <div class="card">
+              <h2>High School</h2>
+              <p>Desert Hills High School</p>
+              <p>Class of 2021</p>
+            </div>
+            <div class="card">
+              <h2>College</h2>
+              <p>Utah Tech University</p>
+              <p>UMASS Amherst</p>
+              <p>Utah Valley University</p>
+              <p>Class of 2025</p>
+            </div>
+          </section>
+
+          <section id="goals">
+            <h1>Goals</h1>
+            <div class="allCards">
+            <div class="card">
+              <h2>Goal #1</h2>
+              <p>My career goal is to work for a forward-thinking web development company.</p>
+              <p>Working reate user-centric, aesthetically pleasing websites that elevate 
+                the online presence of clients and provide an exceptional user experience.</p>
+              <button><a href="#">Learn More</a></button>
+            </div>
+
+            <div class="card">
+              <h2>Goal #2</h2>
+              <p>My career goal is to work for a forward-thinking web development company.</p>
+              <p>Working reate user-centric, aesthetically pleasing websites that elevate 
+                the online presence of clients and provide an exceptional user experience.</p>
+              <button><a href="#">Learn More</a></button>
+            </div>
+
+            <div class="card">
+              <h2>Goal #3</h2>
+              <p>My career goal is to work for a forward-thinking web development company.</p>
+              <p>Working reate user-centric, aesthetically pleasing websites that elevate 
+                the online presence of clients and provide an exceptional user experience.</p>
+              <button><a href="#">Learn More</a></button>
             </div>
           </div>
-       
-          <h1>Speaker Lineup</h1>
-          <p>
-            The speaker lineup at this year's tech conference is nothing short of exceptional. 
-            It's a diverse assembly of experts, each offering a unique perspective on the rapidly 
-            evolving tech landscape. <br> <br>
-            Topics span the spectrum, covering everything from artificial intelligence 
-            and cybersecurity to sustainable tech and emerging trends. With this powerhouse of 
-            knowledge and inspiration, attendees are in for a transformative experience that will 
-            shape the future of the tech industry.</p>
-<div class="parent">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <img src="images/woman-1853939_1280.jpg" alt="Avatar" style="width:300px;height:auto;">
-                  </div>
-                  <div class="flip-card-back">
-                    <h2>Hayley Bieber</h2>
-                    <p class="card">Freelance Professional Surfer Liaison</p>
-                    <p class="card">A total girl boss who lives life on her own terms.</p>
-                    <button class="girl">Read More...</button>
-                  </div>
-                </div>
-              </div>
+          </section>
 
-              <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <img src="images/woman-3169726_1280.jpg" alt="Avatar" style="width:300px;height:auto;">
-                  </div>
-                  <div class="flip-card-back">
-                    <h2>Mona Lisa</h2>
-                    <p class="card">Napping Consultant</p>
-                    <p class="card">She helps even the rich and famous get a good snooze in!</p>
-                    <button class="girl">Read More...</button>
-                  </div>
-                </div>
-              </div>
+          <section id="work">
+            <h1>My Work</h1>
+            <div class="allCards">
+            <div class="card">
+              <h2>Job #1</h2>
+              <p>I successfully completed a challenging web development project, leveraging my skills in HTML, CSS, and JavaScript.</p>
+              <img src="images/job.jpg" alt="job">
+              <button><a href="#">Learn More</a></button>
+            </div>
 
-              <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <img src="images/laptop-3087585_1280.jpg" alt="Avatar" style="width:300px;height:auto;">
-                  </div>
-                  <div class="flip-card-back">
-                    <h2>Paris Hilton</h2>
-                    <p class="card">Sustainable Unicorn Wrangler</p>
-                    <p class="card">She focuses on sustaibility when nobody else does.</p>
-                    <button class="girl">Read More...</button>
-                  </div>
-                </div>
-              </div>
-</div>
+            <div class="card">
+              <h2>Job #2</h2>
+              <p>I successfully completed a challenging web development project, leveraging my skills in HTML, CSS, and JavaScript.</p>
+              <img src="images/job.jpg" alt="job">
+              <button><a href="#">Learn More</a></button>
+            </div>
+
+            <div class="card">
+              <h2>Job #3</h2>
+              <p>I successfully completed a challenging web development project, leveraging my skills in HTML, CSS, and JavaScript.</p>
+              <img src="images/job.jpg" alt="job">
+              <button><a href="#">Learn More</a></button>
+            </div>
+          </div>
+          </section>
+
+          <section id="contact">
+            <h1>Contact</h1>
+            <p>Fill out the form below to get in touch with me.</p>
+            <!--Create a contact form that accepts name email and a message-->
+            <form class="form" action="formhandler.php" method="post">
+              <label for="name">Name*</label>
+              <input type="text" id="name" name="name" required>
+              <label for="email">Email*</label>
+              <input type="email" id="email" name="email" required>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+              <button type="submit">Submit</button>
+            </form>
+            <br>
+            <hr>
+            <h1>Email</h1>
+            <p>addilewis21@gmail.com</p>
+            <div class="social">
+            <h1>Social</h1>
+              <img src="images/instagram.png" alt="instagram">
+              <img src="images/linkedin.png" alt="linkedin">
+            </div>
+
+
+          </section>
+        
         </main>
     </div>
 

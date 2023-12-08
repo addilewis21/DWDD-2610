@@ -22,21 +22,80 @@ display: flex;
 li {
   flex: 1;
 }
+
 }
 
 } //end of nav
  
-
-
-div.allcards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: $gutter;
-
-  section {
-    flex-basis: calc(50% - ($gutter)/2);
-  }
+#edu {
+    div.card {
+      //make the cards allign horizontally
+      flex-direction: row;
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+    }
+    img {
+      width: 95%;
+      height: auto;
+      margin: 1rem;
+    
+    }
 }
+
+#goals {
+  div.allCards {
+  display: flex; // This line makes the cards align side by side
+  justify-content: space-between; // This line spaces the cards evenly
+  margin: 0;
+  padding: 0;
+  margin-right: 5.5rem;
+  width: 100%;
+
+    button {
+      width: 70%;
+      margin-left: 2rem;
+    }
+  }
+  }
+
+  #work {
+    div.allCards {
+    justify-content: space-between; // This line spaces the cards evenly
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    div.card {
+      
+        p {
+          font-size: 1.3rem;
+        }
+    }
+      button {
+        padding: 1rem;
+        font-size: 1.5rem;
+      }
+    }
+    }
+
+    #contact {
+        form {
+          width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+
+          button {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-top: 1rem;
+          
+          }
+        }
+      }
+
 
 footer div {
   display: grid;
