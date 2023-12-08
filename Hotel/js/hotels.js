@@ -13,15 +13,15 @@ export const hotels = [
       "phone": " +81 3-6262-3333",
     },
     {
-      "name": "The Ranch at Rock Creek",
+      "name": "Ranch at Rock Creek",
       "photo": "images/h2s.webp",
       "address": ["79 Carriage House Ln", "Philipsburg, MT"],
       "phone": "(877) 786-1545",
     },
     {
-      "name": "The Ritz-Carlton, Kyoto",
+      "name": "The Ritz-Carlton",
       "photo": "images/h5s.webp",
-      "address": ["Hokodencho, 543 KAMOGAWA", "Kyoto, Japan"],
+      "address": ["Hokodencho, 543", "Kyoto, Japan"],
       "phone": "+81 75-746-5555",
     },
     {
@@ -43,9 +43,9 @@ export const hotels = [
       "phone": "+81 136-55-5235",
     },
     {
-      "name": "Grand-Hotel du Cap-Ferrat",
+      "name": "Du Cap-Ferrat",
       "photo": "images/h8s.webp",
-      "address": [" 71 Bd du Général de Gaulle", "Saint-Jean-Cap-Ferrat, France"],
+      "address": [" 71 Bd du Général de Gaulle", "Saint-Jean, France"],
       "phone": "+33 4 93 76 50 50",
     },
     {
@@ -55,19 +55,19 @@ export const hotels = [
       "phone": "+960 656-6666",
     },
     {
-      "name": "One&Only Gorilla's Nest",
+      "name": "Gorilla's Nest",
       "photo": "images/h10s.webp",
       "address": ["Nyonirima, Kinigi", "Ruhengeri, Rwanda"],
       "phone": "+250 221 011 111",
     },
     {
-      "name": "One Nature Nyaruswiga",
+      "name": "One Nature",
       "photo": "images/h11s.webp",
       "address": ["JQ65+M4,", "Seronera, Tanzania"],
       "phone": "+971 4 558 6911",
     },
     {
-      "name": "St. Regis Residence Club",
+      "name": "St. Regis Residence",
       "photo": "images/h12s.webp",
       "address": ["315 E Dean S", "Aspen, CO"],
       "phone": "(970) 920-3300",

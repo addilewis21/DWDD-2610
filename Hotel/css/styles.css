@@ -442,7 +442,7 @@ nav li.active a {
   border: 8px solid #195932;
   border-radius: 10px;
   text-align: center;
-  height: 430px;
+  height: 445px;
 }
 #cards h2 {
   font-weight: 700;
@@ -451,6 +451,7 @@ nav li.active a {
 #cards address {
   font-size: 1.1rem;
   margin: 1rem;
+  margin-bottom: 1.2rem;
 }
 #cards img {
   width: 100%;
@@ -463,9 +464,6 @@ nav li.active a {
   font-weight: 700;
   font-size: 1.1rem;
   border: 3px solid #195932;
-  margin: 2rem;
-  margin-bottom: 0;
-  padding-bottom: 0;
   padding: 0.5rem;
 }
 #cards a:hover {
@@ -510,6 +508,13 @@ footer p {
     width: 50%;
     height: auto;
     float: left;
+  }
+  #cards h2 {
+    margin: 0.2rem;
+    margin-top: 0.5rem;
+  }
+  #cards address {
+    margin-top: -10;
   }
   nav ul {
     list-style-type: none;

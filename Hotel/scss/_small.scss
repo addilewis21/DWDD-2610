@@ -145,7 +145,7 @@ nav {
     border: 8px solid #195932;
     border-radius: 10px;
     text-align: center;
-    height: 430px;
+    height: 445px;
   }
   h2 {
     font-weight: $boldWeight;
@@ -154,6 +154,7 @@ nav {
   address {
     font-size: 1.1rem;
     margin: 1rem;
+    margin-bottom: 1.2rem;
   }
   img {
     width: 100%;
@@ -167,9 +168,6 @@ nav {
     font-weight: $boldWeight;
     font-size: 1.1rem;
     border: 3px solid #195932;
-    margin: 2rem;
-    margin-bottom: 0;
-    padding-bottom: 0;
     padding: .5rem;
   }
   a:hover {
