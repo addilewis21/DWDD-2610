@@ -9,28 +9,28 @@ body {
 }
 
 nav ul{
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    text-align: center;
-    position: fixed;
-    li {
-      flex: none;
-      color: black;
-    }
-    a {
-      text-align: right;
-      margin-left: 2rem;
-        img {
-          display: none;
-        }
-        span {
-          display: block;
-        }
-         &.active {
-          background-color: $blue;
-         }
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  li {
+    flex: none;
+    color: black;
   }
+  a {
+    text-align: right;
+    margin-left: 2rem;
+      img {
+        display: none;
+      }
+      span {
+        display: block;
+      }
+       &.active {
+        background-color: $blue;
+       }
+}
 }
 
 

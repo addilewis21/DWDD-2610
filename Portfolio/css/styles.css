@@ -355,11 +355,8 @@ nav ul a img {
 nav ul a span {
   display: none;
 }
-nav ul a.active {
-  background-color: #04AAD2;
-}
-nav ul a:hover {
-  background-color: #49318C;
+nav li.active {
+  background-color: #a895da;
 }
 
 #hero {

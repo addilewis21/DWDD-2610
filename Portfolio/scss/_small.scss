@@ -33,33 +33,29 @@ nav {
         display: flex;
         justify-content: space-between;
         list-style-type: none;
-        
       
-      a {
-        display: block;
-        text-decoration: none;
-        padding: .75rem;
-        color: black;
+          a {
+            display: block;
+            text-decoration: none;
+            padding: .75rem;
+            color: black;
 
-          img {
-            width: 25px;
-            height: auto;
-          }
-          span {
-            display: none;
-          }
-
-        &.active {
-          background-color: $blue;
-        }
-        &:hover {
-          background-color: $pink;
-        }
+              img {
+                width: 25px;
+                height: auto;
+              }
+              span {
+                display: none;
+              }
+            }
       }
+      li.active {
+        background-color:  lighten($pink, 35%); // This line makes the color 15% lighter
       }
-    
-
   } //end of nav
+
+ 
+
 #hero {
     height: 100vh;
     text-align: center;
