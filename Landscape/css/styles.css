@@ -340,6 +340,7 @@ header {
   align-items: flex-end;
   padding: 1rem 16px;
   gap: 8px;
+  margin: 0;
 }
 header h1 {
   margin: 0;
@@ -398,7 +399,6 @@ nav button.open span:nth-child(2) {
   display: block;
 }
 nav ul {
-  text-decoration: none;
   display: none;
   padding: 0.5rem 2vw;
 }
@@ -406,11 +406,13 @@ nav ul.open {
   display: block;
 }
 nav ul li {
-  border-bottom: solid 1px white;
+  list-style-type: none;
+  text-decoration: none;
+  background-color: #6A3C25;
+  z-index: 1000;
 }
 nav li.active {
   background-color: #311c11;
-  width: 100%;
 }
 nav a {
   display: block;
@@ -420,6 +422,16 @@ nav a {
 }
 nav a:hover {
   background-color: #a35c39;
+}
+
+ul.subnav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
 }
 
 .swiper, .swiper img {
@@ -549,22 +561,22 @@ footer p.legal {
   header h1 {
     font-size: 2rem;
   }
-  nav button {
+  #primaryNav {
+    display: flex;
+    max-height: 60px;
+    margin: 0;
+  }
+  ul.subnav {
+    position: relative;
+  }
+  button {
     display: none;
   }
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-  }
-  nav ul li {
-    flex: 1;
+  div.parent {
+    padding: 10px;
   }
   div.parent section {
     display: grid;
-    grid-template-columns: 140px auto;
-    padding: 10px;
   }
   div.allcards {
     display: flex;
@@ -585,23 +597,17 @@ footer p.legal {
     max-width: 60rem;
     margin: auto;
   }
-  nav {
+  #primaryNav {
     display: flex;
-    justify-content: left;
+    max-height: 65px;
+    margin: 0;
   }
-  nav button {
+  ul.subnav {
+    position: relative;
+    z-index: 100;
+  }
+  button {
     display: none;
-  }
-  nav ul {
-    display: flex;
-    border: none;
-  }
-  nav ul.open {
-    display: flex;
-    float: left;
-  }
-  nav ul li {
-    border: none;
   }
   div.allcards section {
     flex-basis: calc(25% - 16px);

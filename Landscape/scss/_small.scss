@@ -30,6 +30,7 @@ header {
   align-items: flex-end;
   padding: 1rem $gutter;
   gap: 8px;
+  margin: 0;
   h1 {
     margin: 0;
     font-size: 1.2rem;
@@ -90,7 +91,6 @@ nav {
     display: block;
   }
       ul{
-        text-decoration: none;
         display: none;
         padding: .5rem 2vw;
       }
@@ -98,12 +98,15 @@ nav {
         display: block;
       }
       ul li {
-        border-bottom: solid 1px white;
+        list-style-type: none; // This will remove the bullets
+        text-decoration: none;
+        background-color: $primaryColor;
+        z-index: 1000;
+
       }
 
       li.active {
         background-color: darken($primaryColor, 15%);
-        width: 100%;
     
       }
       a {
@@ -116,7 +119,6 @@ nav {
           background-color: lighten($primaryColor, 15%);
         }
       }
-    
 
   } 
 
@@ -128,6 +130,7 @@ ul.subnav {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  z-index: 1000;
 }
 
   //end of nav

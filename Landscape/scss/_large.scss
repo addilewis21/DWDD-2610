@@ -3,9 +3,21 @@ header, main, footer {
   margin: auto;
 }
 
+#primaryNav{
+  display: flex;
+  max-height: 65px;
+  margin: 0;
+}
 
+ul.subnav{
+  position: relative;
+  z-index: 100;
+}
 
-// main stuff
+button {
+  display: none;
+}
+
 div.allcards {
 
   section {
