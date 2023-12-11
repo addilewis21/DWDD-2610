@@ -313,6 +313,7 @@ html {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 /*---- apply a natural box layout model to all elements -------*/
@@ -652,6 +653,8 @@ footer {
   body {
     display: grid;
     grid-template-columns: 250px auto;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
   }
   #navWrapper {
     grid-row: 1/span 3;

@@ -1,6 +1,8 @@
 body {
   display: grid;
   grid-template-columns: 250px auto;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 #navWrapper {
